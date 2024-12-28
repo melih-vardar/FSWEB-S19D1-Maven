@@ -29,8 +29,8 @@ public class FruitController {
     }
 
     @GetMapping("/{id}")
-    public FruitResponse get(@Positive(message = "is sıfırdan küçük olamaz") @PathVariable("id") Long id){
-        return new FruitResponse("get by id succsed", fruitService.getById(id));
+    public FruitResponse get(@Positive(message = "id sıfırdan küçük olamaz") @PathVariable("id") Long id){
+        return new FruitResponse("get by id succeed!", fruitService.getById(id));
     }
 
     @GetMapping("/name/{name}")
